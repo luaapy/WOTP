@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Features | WOTP Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #030712;
+            --card: #111827;
+            --text: #f9fafb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .f-card {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .f-card:hover {
+            transform: translateY(-10px);
+            background: #1e293b;
+            border-color: var(--primary);
+        }
+
+        .f-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .f-card p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/home.html"
+                style="color: var(--primary); text-decoration: none; margin-bottom: 2rem; display: block;">← Back to
+                Home</a>
+            <h1>Powered by Innovation.</h1>
+            <p>Everything you need for a professional communications infrastructure.</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="f-card">
+                <div class="icon">🔌</div>
+                <h3>Plug & Play API</h3>
+                <p>Clean RESTful API that works with any programming language. JSON-ready and fully versioned.</p>
+            </div>
+            <div class="f-card">
+                <div class="icon">📊</div>
+                <h3>Live Analytics</h3>
+                <p>Monitor your traffic, success rates, and delivery times with built-in real-time charts.</p>
+            </div>
+            <div class="f-card">
+                <div class="icon">🧩</div>
+                <h3>Plugin System</h3>
+                <p>Extend the bot functionality with modular plugins. Auto-reply, AI integration, and more.</p>
+            </div>
+            <div class="f-card">
+                <div class="icon">🧱</div>
+                <h3>Template Engine</h3>
+                <p>Create reusable message templates with dynamic variables like {{code}} and {{name}}.</p>
+            </div>
+            <div class="f-card">
+                <div class="icon">🔐</div>
+                <h3>Enterprise Security</h3>
+                <p>Encrypted local database, rate limiting, and master-key protection for all admin routes.</p>
+            </div>
+            <div class="f-card">
+                <div class="icon">⚡</div>
+                <h3>Native Speed</h3>
+                <p>Powered by Baileys & Node.js 22, ensuring the lowest possible latency for OTP delivery.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

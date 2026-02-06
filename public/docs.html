@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | WOTP Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #030712;
+            --card: #111827;
+            --text: #f9fafb;
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .code-block {
+            background: #000;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+            overflow-x: auto;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: 'JSON';
+            position: absolute;
+            right: 1rem;
+            top: 0.5rem;
+            font-size: 0.7rem;
+            color: #444;
+        }
+
+        .method {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+
+        .post {
+            background: #10b981;
+            color: white;
+        }
+
+        .get {
+            background: #3b82f6;
+            color: white;
+        }
+
+        li {
+            margin-left: 2rem;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/home.html" style="color: var(--primary); text-decoration: none;">← Back to Home</a>
+        <h1 style="margin-top: 2rem;">Documentation</h1>
+        <p>Learn how to integrate the WOTP API into your applications. All requests must be authenticated using a Bearer
+            Token.</p>
+
+        <h2>Authentication</h2>
+        <p>Acquire your API key from the Dashboard settings. Header format:</p>
+        <div class="code-block">Authorization: Bearer YOUR_API_KEY</div>
+
+        <h2>Endpoints</h2>
+
+        <h3><span class="method post">POST</span> /api/v1/otp/send</h3>
+        <p>Sends a one-time password to a WhatsApp number.</p>
+        <div class="code-block">
+            {
+            "phone": "6283834946034",
+            "message": "Kode OTP Anda adalah {{code}}",
+            "code": "123456",
+            "expiryMinutes": 5
+            }
+        </div>
+
+        <h3><span class="method post">POST</span> /api/v1/otp/verify</h3>
+        <p>Verifies the code sent to a specific number.</p>
+        <div class="code-block">
+            {
+            "phone": "6283834946034",
+            "code": "123456"
+            }
+        </div>
+
+        <h3><span class="method get">GET</span> /api/v1/otp/status</h3>
+        <p>Returns the platform's current connection status.</p>
+
+        <h2>Rate Limiting</h2>
+        <p>Standard accounts are limited to 100 requests per hour. If you require higher limits, please contact
+            administration.</p>
+    </div>
+</body>
+
+</html>
