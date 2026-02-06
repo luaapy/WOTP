@@ -1,0 +1,22 @@
+{
+    "watch": [
+        "src",
+        "index.js"
+    ],
+    "ext": "js,json",
+    "ignore": [
+        "src/**/*.test.js",
+        "tests/**/*",
+        "logs/**/*",
+        "data/**/*",
+        "node_modules/**/*",
+        "auth_info_baileys/**/*"
+    ],
+    "exec": "node index.js",
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "delay": "1000",
+    "verbose": true,
+    "restartable": "rs"
+}

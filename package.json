@@ -1,0 +1,29 @@
+{
+  "name": "wotp-enterprise-platform",
+  "version": "3.0.0",
+  "description": "Enterprise-grade WhatsApp OTP delivery platform with advanced features",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node tests/test_mock.js",
+    "lint": "eslint src/**/*.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "axios": "^1.13.4",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.4",
+    "express": "^4.18.2",
+    "joi": "^18.0.2",
+    "pino": "^8.16.1",
+    "pino-pretty": "^10.3.1",
+    "qrcode-terminal": "^0.12.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^13.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
