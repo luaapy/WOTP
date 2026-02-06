@@ -411,12 +411,6 @@ This project is licensed under the MIT License.
 
 For issues and questions:
 - Create an issue on GitHub
-- Email: admin@wotp-gateway.pro
 
 ---
 
-<div align="center">
-
-**Made with ❤️ for the developer community**
-
-</div>
